@@ -1,3 +1,4 @@
+// 1-vazifa
 // 1-savol
 // let x = +prompt("Sonizni kiriting")
 // if ( x % 2 === 0){
@@ -67,3 +68,46 @@
 // }
 
 // check();
+
+// 2-vazifa
+// 1-savol
+// let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+// let res = arr.filter((n) => n % 2 === 0)
+// console.log(res);
+
+// 2-savol
+// let arr = +prompt("Sonlaringizni kiriting")
+// let res = arr.reduce((acc, cur) => acc + cur)
+// console.log(res);
+
+// 3-savol
+// let arr = [7, -8, 2, 6, 9, -4, 12, 3, -11, 18];
+// let sum = 0;
+
+// for (let num of arr) {
+//   if (num > 0 && num % 2 === 0) {
+//     sum += num;
+//   }
+// }
+// console.log(sum);
+
+// 4-savol
+// for (let i = 1; i <= 100; i++) {
+//     if (i % 3 === 0 && i % 5 === 0) {
+//         console.log(i);
+//     }
+// }
+
+// 5-savol
+// let arr = [2, -8, 2, 1, 5, 4, -15, 9, 13];
+// let max = arr[0];
+// let min = arr[0];
+// for (let num of arr) {
+//   if (num > max) max = num;
+//   if (num < min) min = num;
+// }
+// console.log("Kattasi:", max + ".", "Kichigi:", min);
+
+
+
+
