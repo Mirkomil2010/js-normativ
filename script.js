@@ -108,6 +108,49 @@
 // }
 // console.log("Kattasi:", max + ".", "Kichigi:", min);
 
+// 3-vazifa
+// 1-savol
+// let arr = [3, 8, 9, 7, 5]
+// let res = arr.slice(4, 5).map((n) => n ** 2).concat(arr.slice(0, 4))
+// console.log(res);
+
+// 2-savol
+// let arr = [9, 8, 5, 1, 6, 4]
+// let juft = arr.filter((n) => n % 2 === 0)
+// let res = juft.reduce((acc, cur) => acc + cur)
+// console.log(res);
+
+// 3-savol
+// let arr = [2, -8, 9, 1, -15, 3, 0, 5]
+// let musbat = arr.filter((n) => n > 0)
+// let res = musbat.reduce((acc, cur) => acc * cur)
+// console.log(res);
+
+// 4-savol
+// let arr = [6, 1, 3, 5, 6, 2, 0, 4]
+// let arrays = arr.filter((n) => n > 2)
+// let correct = arrays.sort((a, b) => a - b)
+// let res = correct.map((n) => n ** 2)
+// console.log(res);
+
+
+
+
+// 5-savol
+// let arr = [1, [2, 3], [4, [5, 6, 7]]]
+// let full = arr.flat(2)
+// let res = full.filter((n) => n % 2 !== 0)
+// console.log(res);
+
+
+
+
+
+
+
+
+
+
 
 
 
