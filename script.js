@@ -142,6 +142,28 @@
 // let res = full.filter((n) => n % 2 !== 0)
 // console.log(res);
 
+// 4-vazifa
+// 1-savol
+// let arr = ["Jasmina", "Muhammadior", "Bek", "Yusufxon", "Asad", "John"]
+// let res = arr.filter((n) => n.length > 5)
+// console.log(res);
+
+// 2-savol
+// let points = [1, 2, 3, 4, 5, 6]
+// let min = Math.min( ...points);
+// let max = Math.max( ...points);
+// let res = max - min
+// console.log(res);
+
+// 3-savol
+let string = ["seVinCH", "IbrohiM", "miRKomil", "JURABEK", "abdulaziz"]
+let upper = string.toUpperCase()
+console.log(upper);
+
+
+
+
+
 
 
 
