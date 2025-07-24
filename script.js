@@ -156,9 +156,30 @@
 // console.log(res);
 
 // 3-savol
-let string = ["seVinCH", "IbrohiM", "miRKomil", "JURABEK", "abdulaziz"]
-let upper = string.toUpperCase()
-console.log(upper);
+// let str = ["seVinCH", "IbrohiM", "miRKomil", "JURABEK", "abdulaziz"]
+// let res = str.map((n) => n[0].toUpperCase() + n.slice(1).toLowerCase())
+// console.log(res);
+
+// 4-savol
+// let a = [16, 20, 8, 2, 12, 27, 9, 13];
+// let b = a[a.length - 1];
+// let res = a.find((n) => n < b) || 0;
+
+// console.log(res);
+
+// 5-savol
+// const arr = [1, 2, 2, 3, 4, 4, 5];
+// const res = arr.reduce((unique, item) => {
+//   const count = arr.filter((n) => n === item).length;
+//   if (count === 1) {
+//     unique.push(item);
+//   }
+//   return unique;
+// }, []);
+// console.log(res);
+
+
+
 
 
 
