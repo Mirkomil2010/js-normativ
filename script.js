@@ -178,6 +178,62 @@
 // }, []);
 // console.log(res);
 
+//5-vazifa
+// 1-savol
+// let obj={
+
+// }
+// obj.name ="Palonchi"
+// obj.age=12
+// obj.country="earth"
+// console.log(obj);
+
+// 2-savol
+// let obj={
+//     valuta: "Dollar",
+//     miqdor: 100,
+// }
+// let price =(6 * 5) + (10 * 2)
+// obj.miqdor=100 - price
+
+// console.log(obj);
+
+// 3-savol
+// const obj = {
+//     Anvar: 19,
+//     Salim: 21,
+//     Jasur: 13
+// };
+
+// const maxName = Object.entries(obj).reduce((max, curr) => {
+//     return curr[1] > max[1] ? curr : max;
+// });
+
+// console.log(`Yoshi eng katta: ${maxName[0]} (${maxName[1]} yosh)`);
+
+
+// 4-savol
+// const obj = { name: "John", age: 22, city: "Tashkent" };
+
+// const updated = Object.entries(obj).map(([key, value]) => {
+//   if (key === "age") return [key, 30];
+//   if (key === "city") return [key, "New York"];
+//   return [key, value];
+// });
+
+// console.log(updated);
+
+// 5-savol
+// let obj = { Salim: 60, Ali: 50, Kimsan: 90 };
+// for (let key in obj) {
+//   if (obj[key] < 60) {
+//     delete obj[key];
+//   }
+// }
+// console.log(obj);
+
+
+
 
 
 
