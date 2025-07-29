@@ -232,6 +232,69 @@
 // }
 // console.log(obj);
 
+// 6-vazifa
+// 1-savol
+// let obj={
+//     name:'Ali' // Name misol uchun
+// }
+// let res = Object.values(obj)
+// console.log(res); 
+
+// 2-savol
+// let obj ={
+//     a:15,
+//     b:10,
+// }
+// let val = Object.values(obj)
+// let res = val.reduce((acc, cur)=>acc*cur)
+// console.log(res);
+
+// 3-savol
+// let obj = {
+//     soliq: 20,
+//     kamunal: 12,
+//     prava: 980,
+//     havo: 3,
+//     qanchaKotarildi(foiz) {
+//     for(let key in obj) {
+//         if (typeof obj[key] === 'number') {
+//             obj[key] += obj[key] * foiz / 100;
+//         }   
+//     }
+// }
+// };
+
+// obj.qanchaKotarildi(15);
+// console.log(obj);   
+
+// 4-savol
+// let obj = {
+//     Salim: 50,
+//     Vali: 87,
+//     Ali: 12,
+//     deleteUser(name) {
+//         delete this [name];
+//     }
+// }
+
+// obj.deleteUser("Vali")
+// console.log(obj);
+
+// 5-savol
+let obj={
+    olma:7,
+    mandarin:4,
+    banan:6,
+    apelsin:1,
+}
+for(let x in obj){
+    if(obj[x] % 2 !== 0){
+        delete obj[x]
+
+    }
+}
+console.log(obj);
+
 
 
 
