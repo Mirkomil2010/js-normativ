@@ -281,19 +281,19 @@
 // console.log(obj);
 
 // 5-savol
-let obj={
-    olma:7,
-    mandarin:4,
-    banan:6,
-    apelsin:1,
-}
-for(let x in obj){
-    if(obj[x] % 2 !== 0){
-        delete obj[x]
+// let obj={
+//     olma:7,
+//     mandarin:4,
+//     banan:6,
+//     apelsin:1,
+// }
+// for(let x in obj){
+//     if(obj[x] % 2 !== 0){
+//         delete obj[x]
 
-    }
-}
-console.log(obj);
+//     }
+// }
+// console.log(obj);
 
 
 
