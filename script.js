@@ -295,6 +295,78 @@
 // }
 // console.log(obj);
 
+// 7-vazifa
+// 1-savol
+// let obj={
+//     Salim:25,
+//     Ali:17,
+//     Malika:21,
+// }
+// for(let key in obj){
+// obj[key]=obj[key] +2
+
+// }
+// console.log(obj);
+
+// 2-savol
+// const users = [
+//   { name: "Ali", age: 20 },
+//   { name: "Vali", age: 25 },
+//   { name: "Sami", age: 22 }
+// ];
+
+// users.forEach(user => {
+//   console.log(`${user.name} : ${user.age}`);
+// });
+
+
+// 3-savol
+// let obj = {
+//     a: 10,
+//     b: "hello",
+//     c: 5,
+//     d: true
+// }
+// for (let x in obj) {
+//     if (typeof obj[x] !== "number") {
+//         delete obj[x]
+//     }
+// }
+// console.log(obj);
+
+// 4-savol
+// let person = {
+//     name:"Lola",
+//     age: null,
+//     job:"Teacher",
+//     city: null,
+// }
+// for (let x in person) {
+//     if (typeof person[x] !== "string") {
+//         delete person[x]
+//     }
+// }
+// console.log(person);
+
+// 5-savol
+// const users = [
+//     {
+//         name: "Ali",
+//         age: 17,
+//     },
+//     {
+//         name: "Vali",
+//         age: 19,
+//     },
+//     {
+//         name: "Sami",
+//         age: 21,
+//     },
+// ]
+// const res = users.filter((n) => n.age > 18);
+// console.log(res);
+
+
 
 
 
