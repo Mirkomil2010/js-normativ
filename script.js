@@ -507,7 +507,45 @@
 // console.log(myEvery(nums, x => x > 0));
 
 
+// 10-vazifa
+// 1-savol
 
+// async function fn() {
+//   try {
+//     const title = await fetch("https://api.escuelajs.co/api/v1/products");
+//     const data = await title.json();
+//     data.forEach((n) => console.log(n.title));
+//   } catch (error) {
+//     alert(error.message); 
+//   }
+// }
+// fn();
+
+// 2-savol
+
+// async function fn(params) {
+//     try {
+//         const user = await fetch("https://api.escuelajs.co/api/v1/categories")
+//         const data = await user.json()
+//         data.forEach((n) => console.log(n.user));
+//     } catch (error) {
+//         alert(error.message)
+//     }
+// }
+// fn()
+
+// 3-savol
+
+// async function fn(params) {
+//     try {
+//         const name = await fetch("https://api.escuelajs.co/api/v1/categories")
+//         const data = await name.json()
+//         data.forEach((n) => console.log(n.name));
+//     } catch (error) {
+//         alert(error.message)
+//     }
+// }
+// fn()
 
 
 
