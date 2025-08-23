@@ -547,6 +547,111 @@
 // }
 // fn()
 
+// 11-vazifa
+// 1-savol
+// let btn = document.getElementById("btn")
+// let div = document.querySelector("div")
+// btn.addEventListener("click", () => {
+//     div.style.backgroundColor="green ";
+// })
+
+// 2-savol
+// let p = document.createElement("p")
+// p.textContent = 'Salom'
+// document.body.appendChild(p)
+
+// p.addEventListener('mouseover', () => {
+//   p.style.color = 'red'
+// })
+// p.addEventListener('mouseout', () => {
+//   p.style.color = 'black'
+// })
+
+// 3-vazifa
+// let box = document.createElement('div')
+// box.textContent = 'div elementi'
+// document.body.appendChild(box)
+
+// let btn = document.createElement('button')
+// btn.textContent = "class qoshish/olish"
+// document.body.appendChild(btn)
+
+// let style = document.createElement('style')
+// style.textContent = `.highlight { border: 2px solid blue; }`
+// document.head.appendChild(style)
+
+// btn.addEventListener('click', () => {
+//   box.classList.toggle('highlight')
+// })
+
+// 4-savol
+// const toggleBtn = document.getElementById("toggleBtn");
+// const img = document.getElementById("img");
+
+// toggleBtn.addEventListener("click", () => {
+//   if (myImg.style.display === "none") {
+//     myImg.style.display = "block";
+//   } else {
+//     myImg.style.display = "none";
+//   }
+// });
+
+// 5-savol
+// const input = document.getElementById("input");
+
+// input.addEventListener("input", () => {
+//     if (input.value.length < 5) {
+//         input.style.border = "3px solid red";
+//     } else {
+//         input.style.border = "3px solid green";
+//     }
+// });
+
+// 6-savol
+// const colorbtns = document.querySelectorAll(".colorbtn");
+// const colorbox = document.getElementById("colorbox");
+// colorbox.textContent = "hello";
+
+// colorbtns.forEach(btn => {
+//     btn.addEventListener("click", () => {
+//         const color = btn.getAttribute("data-color");
+//         colorbox.style.backgroundColor = color;
+//     });
+// });
+
+// 7-savol
+// Add a Dark Mode toggle that switches the whole page between dark/light
+
+const style = document.createElement("style");
+style.textContent = `
+  body { transition: background-color .2s ease, color .2s ease; }
+  .dark-mode { background:#0f1115; color:#ffffff; }
+  .dark-mode a { color: #9ecbff; }
+  .dm-btn {
+    padding: 10px 14px; border: 0;
+  }
+`;
+document.head.append(style);
+
+const btn = document.createElement("button");
+btn.className = "dm-btn";
+document.body.append(btn);
+
+function applyDark(on) {
+  document.body.classList.toggle("dark-mode", on);
+  btn.textContent = on ? "Light Mode" : "Dark Mode";
+  localStorage.setItem("dark-mode", on ? "1" : "0");
+}
+
+applyDark(
+  localStorage.getItem("dark-mode") === "1" ||
+  window.matchMedia("(prefers-color-scheme: dark)").matches
+);
+
+btn.addEventListener("click", () => {
+  applyDark(!document.body.classList.contains("dark-mode"));
+});
+
 
 
 

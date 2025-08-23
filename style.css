@@ -1,0 +1,10 @@
+.colorbox {
+  width: 200px;
+  height: 100px;
+  border: 1px solid black;
+  margin-top: 10px;
+}
+
+img {
+  width: 150px;
+}
