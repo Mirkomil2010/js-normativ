@@ -547,7 +547,7 @@
 // }
 // fn()
 
-// 11-vazifa
+// 11-vazifa to'g'irlandi
 // 1-savol
 // let btn = document.getElementById("btn")
 // let div = document.querySelector("div")
