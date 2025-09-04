@@ -567,7 +567,7 @@
 //   p.style.color = 'black'
 // })
 
-// 3-vazifa
+// 3-savol
 // let box = document.createElement('div')
 // box.textContent = 'div elementi'
 // document.body.appendChild(box)
