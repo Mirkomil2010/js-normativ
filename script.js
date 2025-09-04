@@ -622,60 +622,32 @@
 // 7-savol
 // Add a Dark Mode toggle that switches the whole page between dark/light
 
-const style = document.createElement("style");
-style.textContent = `
-  body { transition: background-color .2s ease, color .2s ease; }
-  .dark-mode { background:#0f1115; color:#ffffff; }
-  .dark-mode a { color: #9ecbff; }
-  .dm-btn {
-    padding: 10px 14px; border: 0;
-  }
-`;
-document.head.append(style);
+// const style = document.createElement("style");
+// style.textContent = `
+//   body { transition: background-color .2s ease, color .2s ease; }
+//   .dark-mode { background:#0f1115; color:#ffffff; }
+//   .dark-mode a { color: #9ecbff; }
+//   .dm-btn {
+//     padding: 10px 14px; border: 0;
+//   }
+// `;
+// document.head.append(style);
 
-const btn = document.createElement("button");
-btn.className = "dm-btn";
-document.body.append(btn);
+// const btn = document.createElement("button");
+// btn.className = "dm-btn";
+// document.body.append(btn);
 
-function applyDark(on) {
-  document.body.classList.toggle("dark-mode", on);
-  btn.textContent = on ? "Light Mode" : "Dark Mode";
-  localStorage.setItem("dark-mode", on ? "1" : "0");
-}
+// function applyDark(on) {
+//   document.body.classList.toggle("dark-mode", on);
+//   btn.textContent = on ? "Light Mode" : "Dark Mode";
+//   localStorage.setItem("dark-mode", on ? "1" : "0");
+// }
 
-applyDark(
-  localStorage.getItem("dark-mode") === "1" ||
-  window.matchMedia("(prefers-color-scheme: dark)").matches
-);
+// applyDark(
+//   localStorage.getItem("dark-mode") === "1" ||
+//   window.matchMedia("(prefers-color-scheme: dark)").matches
+// );
 
-btn.addEventListener("click", () => {
-  applyDark(!document.body.classList.contains("dark-mode"));
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// btn.addEventListener("click", () => {
+//   applyDark(!document.body.classList.contains("dark-mode"));
+// });
