@@ -1,8 +1,10 @@
     body {
         font-family: Arial, sans-serif;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
+        gap: 20px;
         height: 100vh;
         background: #f4f4f4;
     }
@@ -54,4 +56,14 @@
         font-size: 14px;
         padding: 6px 12px;
         cursor: pointer;
+    }
+
+    .home {
+        cursor: pointer;
+        padding: 10px;
+        background-color: skyblue;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
     }

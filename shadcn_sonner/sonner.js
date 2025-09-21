@@ -26,3 +26,8 @@ function showToast() {
         setTimeout(() => toast.remove(), 400);
     }, 3000);
 }
+
+const homeBtn = document.getElementById("home");
+homeBtn.addEventListener("click", () => {
+    window.location.href = "../index.html";
+});
