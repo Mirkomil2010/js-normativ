@@ -732,3 +732,8 @@ const accordionBtn = document.getElementById("acordion");
 accordionBtn.addEventListener("click", () => {
     window.location.href = "shadcn_accordion/accordion.html";
 });
+
+const sonnerBtn = document.getElementById("sonner");
+sonnerBtn.addEventListener("click", () => {
+    window.location.href = "shadcn_sonner/sonner.html";
+});

@@ -18,3 +18,13 @@ img {
   border-radius: 5px;
   font-size: 16px;
 }
+
+.sonner {
+  cursor: pointer;
+  padding: 10px;
+  background-color: skyblue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
