@@ -8,3 +8,13 @@
 img {
   width: 150px;
 }
+
+.accordion {
+  cursor: pointer;
+  padding: 10px;
+  background-color: skyblue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}

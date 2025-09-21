@@ -728,4 +728,7 @@
 //     totalEl.innerHTML = `Umumiy: $${totalPrice.toFixed(2)}`;
 // }
 
-
+const accordionBtn = document.getElementById("acordion");
+accordionBtn.addEventListener("click", () => {
+    window.location.href = "shadcn_accordion/accordion.html";
+});
