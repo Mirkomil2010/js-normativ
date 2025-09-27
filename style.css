@@ -28,3 +28,38 @@ img {
   border-radius: 5px;
   font-size: 16px;
 }
+
+.product,
+.cart {
+  border: 2px dashed #ccc;
+  padding: 20px;
+  min-height: 200px;
+  width: 250px;
+}
+
+.product-item {
+  border: 1px solid #999;
+  padding: 10px;
+  margin-bottom: 10px;
+  background: #f0f0f0;
+  cursor: grab;
+}
+
+.cart-item {
+  margin: 5px 0;
+}
+
+.cart.drag-over {
+  background-color: #e0ffe0
+}
+
+.cards {
+  font-family: sans-serif;
+  display: flex;
+  gap: 40px;
+  padding: 20px;
+}
+
+.box{
+  margin: 15px 0px;
+}
