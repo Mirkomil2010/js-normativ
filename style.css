@@ -60,6 +60,77 @@ img {
   padding: 20px;
 }
 
-.box{
+.box {
   margin: 15px 0px;
+}
+
+.css1 {
+  color: red;
+  text-align: center;
+}
+
+.css2 {
+  color: green;
+  background-color: yellow;
+  padding: 10px;
+}
+
+.blok {
+  background-color: blue;
+  color: white;
+  border-radius: 15px;
+  padding: 15px;
+  width: fit-content;
+}
+
+.custom-heading {
+  text-transform: uppercase;
+  font-family: serif;
+}
+
+.center-paragraph {
+  text-align: center;
+}
+
+.typo {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  letter-spacing: 1px;
+}
+
+.bold-italic {
+  font-weight: bold;
+  font-style: italic;
+}
+
+.strike-underline {
+  text-decoration: underline line-through;
+}
+
+.lowercase-text {
+  text-transform: lowercase;
+}
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+.center {
+  text-align: center;
+}
+
+.shadow-text {
+  text-shadow: 2px 2px 5px gray;
+}
+
+.custom-heading {
+  font-family: Georgia, serif;
+}
+
+.custom-paragraph {
+  font-family: Tahoma, sans-serif;
 }
