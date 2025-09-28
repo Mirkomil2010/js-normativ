@@ -549,109 +549,109 @@
 
 // 11-vazifa to'g'irlandi
 // 1-savol
-let btn = document.getElementById("btn")
-let div = document.getElementById("div1")
-btn.addEventListener("click", () => {
-    div.style.backgroundColor = "green";
-})
+// let btn = document.getElementById("btn")
+// let div = document.getElementById("div1")
+// btn.addEventListener("click", () => {
+//     div.style.backgroundColor = "green";
+// })
 
-// 2-savol
-let p = document.createElement("p")
-p.textContent = 'Salom'
-document.body.appendChild(p)
+// // 2-savol
+// let p = document.createElement("p")
+// p.textContent = 'Salom'
+// document.body.appendChild(p)
 
-p.addEventListener('mouseover', () => {
-    p.style.color = 'red'
-})
-p.addEventListener('mouseout', () => {
-    p.style.color = div.style.color
-})
+// p.addEventListener('mouseover', () => {
+//     p.style.color = 'red'
+// })
+// p.addEventListener('mouseout', () => {
+//     p.style.color = div.style.color
+// })
 
-// 3-savol
-let box = document.createElement('div')
-box.textContent = 'div elementi'
-document.body.appendChild(box)
+// // 3-savol
+// let box = document.createElement('div')
+// box.textContent = 'div elementi'
+// document.body.appendChild(box)
 
-let btn1 = document.createElement('button')
-btn1.textContent = "class qoshish/olish"
-document.body.appendChild(btn1)
+// let btn1 = document.createElement('button')
+// btn1.textContent = "class qoshish/olish"
+// document.body.appendChild(btn1)
 
-let styleEl = document.createElement('style')
-styleEl.textContent = `.highlight { border: 2px solid blue; }`
-document.head.appendChild(styleEl)
+// let styleEl = document.createElement('style')
+// styleEl.textContent = `.highlight { border: 2px solid blue; }`
+// document.head.appendChild(styleEl)
 
-btn1.addEventListener('click', () => {
-    box.classList.toggle('highlight')
-})
+// btn1.addEventListener('click', () => {
+//     box.classList.toggle('highlight')
+// })
 
 // 4-savol
-const toggleBtn = document.getElementById("toggleBtn");
-const img = document.getElementById("img");
+// const toggleBtn = document.getElementById("toggleBtn");
+// const img = document.getElementById("img");
 
-if (toggleBtn && img) {
-    toggleBtn.addEventListener("click", () => {
-        if (img.style.display === "none") {
-            img.style.display = "block";
-        } else {
-            img.style.display = "none";
-        }
-    });
-}
+// if (toggleBtn && img) {
+//     toggleBtn.addEventListener("click", () => {
+//         if (img.style.display === "none") {
+//             img.style.display = "block";
+//         } else {
+//             img.style.display = "none";
+//         }
+//     });
+// }
 
-// 5-savol
-const input = document.getElementById("input");
-if (input) {
-    input.addEventListener("input", () => {
-        if (input.value.length < 5) {
-            input.style.border = "3px solid red";
-        } else {
-            input.style.border = "3px solid green";
-        }
-    });
-}
+// // 5-savol
+// const input = document.getElementById("input");
+// if (input) {
+//     input.addEventListener("input", () => {
+//         if (input.value.length < 5) {
+//             input.style.border = "3px solid red";
+//         } else {
+//             input.style.border = "3px solid green";
+//         }
+//     });
+// }
 
 // 6-savol
-const colorbtns = document.querySelectorAll(".colorbtn");
-const colorbox = document.getElementById("colorbox");
-if (colorbox) colorbox.textContent = "hello";
+// const colorbtns = document.querySelectorAll(".colorbtn");
+// const colorbox = document.getElementById("colorbox");
+// if (colorbox) colorbox.textContent = "hello";
 
-colorbtns.forEach(btn => {
-    btn.addEventListener("click", () => {
-        const color = btn.getAttribute("data-color");
-        colorbox.style.backgroundColor = color;
-    });
-});
+// colorbtns.forEach(btn => {
+//     btn.addEventListener("click", () => {
+//         const color = btn.getAttribute("data-color");
+//         colorbox.style.backgroundColor = color;
+//     });
+// });
 
 // 7-savol (Dark mode)
-const style = document.createElement("style");
-style.textContent = `
-  body { transition: background-color .2s ease, color .2s ease; }
-  .dark-mode { background:#0f1115; color:#ffffff; }
-  .dark-mode a { color: #9ecbff; }
-  .dm-btn {
-    padding: 10px 14px; border: 0;
-  }
-`;
-document.head.append(style);
+// const style = document.createElement("style");
+// style.textContent = `
+//   body { transition: background-color .2s ease, color .2s ease; }
+// //   .dark-mode { background:#0f1115; color:#ffffff; }
+// //   .dark-mode a { color: #9ecbff; }
+// //   .dm-btn {
+// //     padding: 10px 14px; border: 0;
+// //   }
+// // `;
+// document.head.append(style);
 
-const dmBtn = document.createElement("button");
-dmBtn.className = "dm-btn";
-document.body.append(dmBtn);
+// const dmBtn = document.createElement("button");
+// dmBtn.className = "dm-btn";
+// document.body.append(dmBtn);
 
-function applyDark(on) {
-    document.body.classList.toggle("dark-mode", on);
-    dmBtn.textContent = on ? "Light Mode" : "Dark Mode";
-    localStorage.setItem("dark-mode", on ? "1" : "0");
-}
+// function applyDark(on) {
+//     document.body.classList.toggle("dark-mode", on);
+//     dmBtn.textContent = on ? "Light Mode" : "Dark Mode";
+//     localStorage.setItem("dark-mode", on ? "1" : "0");
+// }
 
-applyDark(
-    localStorage.getItem("dark-mode") === "1" ||
-    window.matchMedia("(prefers-color-scheme: dark)").matches
-);
+// applyDark(
+//     localStorage.getItem("dark-mode") === "1" ||
+//     window.matchMedia("(prefers-color-scheme: dark)").matches
+// );
 
-dmBtn.addEventListener("click", () => {
-    applyDark(!document.body.classList.contains("dark-mode"));
-});
+// dmBtn.addEventListener("click", () => {
+//     applyDark(!document.body.classList.contains("dark-mode"));
+// });
 
 // 14-vazifa
 // const products = [
@@ -737,3 +737,90 @@ dmBtn.addEventListener("click", () => {
 // sonnerBtn.addEventListener("click", () => {
 //     window.location.href = "shadcn_sonner/sonner.html";
 // });
+
+// Event listenerlar 
+// 1-savol
+let count = localStorage.getItem("count") ? parseInt(localStorage.getItem("count")) : 0;
+document.getElementById("count").innerText = count;
+
+document.getElementById("clickBtn").addEventListener("click", function () {
+    count++;
+    localStorage.setItem("count", count);
+    document.getElementById("count").innerText = count;
+});
+// 2-savol
+const savedName = localStorage.getItem("name");
+if (savedName) {
+    document.getElementById("savedName").innerText = savedName;
+    document.getElementById("nameInput").value = savedName;
+}
+
+document.getElementById("saveBtn").addEventListener("click", function () {
+    const name = document.getElementById("nameInput").value;
+    localStorage.setItem("name", name);
+    document.getElementById("savedName").innerText = name;
+});
+
+// 3-savol
+document.getElementById("myForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("formMessage");
+
+    if (!name || !email) {
+        message.textContent = "Barcha maydonlarni toldiring";
+        return;
+    }
+
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) {
+        message.textContent = "Email notogri!";
+        return;
+    }
+
+    message.textContent = "Muvaffaqiyatli bajarildi";
+    document.getElementById("myForm").reset();
+});
+
+// 4-savol
+const box = document.getElementById("box");
+const coords = document.getElementById("coords");
+
+box.addEventListener("mousemove", function (e) {
+    const rect = box.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    coords.textContent = `X: ${x}, Y: ${y}`;
+});
+
+box.addEventListener("mouseleave", function () {
+    coords.textContent = "Tashqaridaman";
+});
+
+// 5-savol
+const message = document.getElementById("message");
+
+const texts = {
+    uz: "Salom, xush kelibsiz!",
+    en: "Hello, welcome!"
+};
+
+const savedLang = localStorage.getItem("lang");
+
+if (savedLang) {
+    message.textContent = texts[savedLang];
+} else {
+    message.textContent = texts.uz;
+}
+
+document.getElementById("uzBtn").addEventListener("click", () => {
+    message.textContent = texts.uz;
+    localStorage.setItem("lang", "uz");
+});
+
+document.getElementById("enBtn").addEventListener("click", () => {
+    message.textContent = texts.en;
+    localStorage.setItem("lang", "en");
+});
