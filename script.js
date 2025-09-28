@@ -740,87 +740,120 @@
 
 // Event listenerlar 
 // 1-savol
-let count = localStorage.getItem("count") ? parseInt(localStorage.getItem("count")) : 0;
-document.getElementById("count").innerText = count;
+// let count = localStorage.getItem("count") ? parseInt(localStorage.getItem("count")) : 0;
+// document.getElementById("count").innerText = count;
 
-document.getElementById("clickBtn").addEventListener("click", function () {
-    count++;
-    localStorage.setItem("count", count);
-    document.getElementById("count").innerText = count;
-});
+// document.getElementById("clickBtn").addEventListener("click", function () {
+//     count++;
+//     localStorage.setItem("count", count);
+//     document.getElementById("count").innerText = count;
+// });
 // 2-savol
-const savedName = localStorage.getItem("name");
-if (savedName) {
-    document.getElementById("savedName").innerText = savedName;
-    document.getElementById("nameInput").value = savedName;
-}
+// const savedName = localStorage.getItem("name");
+// if (savedName) {
+//     document.getElementById("savedName").innerText = savedName;
+//     document.getElementById("nameInput").value = savedName;
+// }
 
-document.getElementById("saveBtn").addEventListener("click", function () {
-    const name = document.getElementById("nameInput").value;
-    localStorage.setItem("name", name);
-    document.getElementById("savedName").innerText = name;
-});
+// document.getElementById("saveBtn").addEventListener("click", function () {
+//     const name = document.getElementById("nameInput").value;
+//     localStorage.setItem("name", name);
+//     document.getElementById("savedName").innerText = name;
+// });
 
 // 3-savol
-document.getElementById("myForm").addEventListener("submit", function (e) {
-    e.preventDefault();
+// document.getElementById("myForm").addEventListener("submit", function (e) {
+//     e.preventDefault();
 
-    const name = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const message = document.getElementById("formMessage");
+//     const name = document.getElementById("name").value.trim();
+//     const email = document.getElementById("email").value.trim();
+//     const message = document.getElementById("formMessage");
 
-    if (!name || !email) {
-        message.textContent = "Barcha maydonlarni toldiring";
-        return;
-    }
+//     if (!name || !email) {
+//         message.textContent = "Barcha maydonlarni toldiring";
+//         return;
+//     }
 
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailPattern.test(email)) {
-        message.textContent = "Email notogri!";
-        return;
-    }
+//     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+//     if (!emailPattern.test(email)) {
+//         message.textContent = "Email notogri!";
+//         return;
+//     }
 
-    message.textContent = "Muvaffaqiyatli bajarildi";
-    document.getElementById("myForm").reset();
-});
+//     message.textContent = "Muvaffaqiyatli bajarildi";
+//     document.getElementById("myForm").reset();
+// });
 
 // 4-savol
-const box = document.getElementById("box");
-const coords = document.getElementById("coords");
+// const box = document.getElementById("box");
+// const coords = document.getElementById("coords");
 
-box.addEventListener("mousemove", function (e) {
-    const rect = box.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    coords.textContent = `X: ${x}, Y: ${y}`;
-});
+// box.addEventListener("mousemove", function (e) {
+//     const rect = box.getBoundingClientRect();
+//     const x = e.clientX - rect.left;
+//     const y = e.clientY - rect.top;
+//     coords.textContent = `X: ${x}, Y: ${y}`;
+// });
 
-box.addEventListener("mouseleave", function () {
-    coords.textContent = "Tashqaridaman";
-});
+// box.addEventListener("mouseleave", function () {
+//     coords.textContent = "Tashqaridaman";
+// });
 
 // 5-savol
-const message = document.getElementById("message");
+// const message = document.getElementById("message");
 
-const texts = {
-    uz: "Salom, xush kelibsiz!",
-    en: "Hello, welcome!"
-};
+// const texts = {
+//     uz: "Salom, xush kelibsiz!",
+//     en: "Hello, welcome!"
+// };
 
-const savedLang = localStorage.getItem("lang");
+// const savedLang = localStorage.getItem("lang");
 
-if (savedLang) {
-    message.textContent = texts[savedLang];
-} else {
-    message.textContent = texts.uz;
+// if (savedLang) {
+//     message.textContent = texts[savedLang];
+// } else {
+//     message.textContent = texts.uz;
+// }
+
+// document.getElementById("uzBtn").addEventListener("click", () => {
+//     message.textContent = texts.uz;
+//     localStorage.setItem("lang", "uz");
+// });
+
+// document.getElementById("enBtn").addEventListener("click", () => {
+//     message.textContent = texts.en;
+//     localStorage.setItem("lang", "en");
+// });
+
+// Api + DOM
+const API_URL = 'https://api.escuelajs.co/api/v1/products';
+
+async function fetchProducts() {
+    try {
+        const res = await fetch(API_URL);
+        const products = await res.json();
+        renderProducts(products.slice(0, 5));
+    } catch (error) {
+        console.error("Error fetching products:", error);
+    }
 }
 
-document.getElementById("uzBtn").addEventListener("click", () => {
-    message.textContent = texts.uz;
-    localStorage.setItem("lang", "uz");
-});
+function renderProducts(products) {
+    const container = document.getElementById('productsGrid');
 
-document.getElementById("enBtn").addEventListener("click", () => {
-    message.textContent = texts.en;
-    localStorage.setItem("lang", "en");
-});
+    products.forEach(product => {
+        const card = document.createElement('div');
+        card.className = 'bg-white p-4 rounded shadow hover:shadow-lg transition';
+
+
+        card.innerHTML = `
+      <img src="${product.images[0]}" alt="${product.title}" class="w-full h-40 object-cover rounded mb-2">
+      <h2 class="text-lg font-semibold truncate" title="${product.title}">${product.title}</h2>
+      <p class="text-gray-600 font-medium mt-1">$${product.price}</p>
+    `;
+
+        container.appendChild(card);
+    });
+}
+
+fetchProducts();
